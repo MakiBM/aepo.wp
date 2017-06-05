@@ -1,0 +1,52 @@
+.icon-box-list {
+  @include grid($col: 1);
+  margin-top: $rhythm;
+
+  br { display: none; }
+
+  @media(min-width: $small-screen) {
+    @include grid($col: 2);
+    br { display: block; }
+  }
+}
+
+.icon-box-list__item {
+  display: flex;
+  justify-content: center;
+
+  > * {
+    margin: 30px 0;
+    max-width: 320px;
+    width: 100%;
+  }
+
+  @media(min-width: $small-screen) {
+    > * {
+      margin: 60px 0;
+    }
+  }
+}
+
+.icon-box {
+  display: flex;
+  text-align: left;
+}
+
+.icon-box__media {
+  min-width: 75px;
+  padding-top: 5px;
+  text-align: center;
+  flex-shrink: 0;
+
+  > img {
+    margin-right: $rhythm;
+  }
+
+  @media(min-width: $small-screen) {
+    min-width: 100px;
+
+    > img {
+      margin-left: $rhythm;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.tile-list {
+  @include grid(
+    $gutter: 20px,
+    $col: 1
+  );
+
+  * + & {
+    margin-top: $rhythm * 4 !important;
+  }
+
+  @media(min-width: $small-screen) {
+    @include grid(
+      $gutter: 20px,
+      $col: 3
+    );
+  }
+}
+
+.tile {
+  @include background-parent;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+  transition: transform 300ms $ease;
+
+  &:before {
+    content: '';
+    height: 0;
+    width: 0;
+    padding-bottom: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.tile__background {
+  @extend .background-layer;
+  background-color: rgba(black, 0.1);
+  transition: background-color 300ms $ease;
+
+  .tile:hover & {
+    background-color: rgba(black, 0.5);
+  }
+}
+
+.tile__content {
+  transform: translateY(50%);
+  transition: transform 300ms $ease;
+
+  .tile:hover & {
+    transform: translateY(0);
+  }
+}
+
+.tile__title {
+  @include typography(name);
+  letter-spacing: 0.2em;
+  transform: translateY(-50%);
+  transition: transform 300ms $ease;
+
+  .tile:hover & {
+    transform: translateY(0);
+  }
+}
+
+.tile__time {
+  @include typography(date);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 300ms $ease,
+              transform 300ms $ease;
+
+  .tile:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tile__text {
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 300ms $ease,
+              transform 300ms $ease;
+
+  .tile:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tile__link {
+  display: block;
+  margin-top: $rhythm;
+  font-weight: 900;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 300ms $ease,
+              transform 300ms $ease;
+
+  .tile:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

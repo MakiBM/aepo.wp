@@ -11,6 +11,14 @@ web/wp
 web/.htaccess
 web/app/plugins/advanced-custom-fields-pro
 
+# Theme
+web/app/themes/aepo/dist
+web/app/themes/aepo/bower_components
+web/app/themes/aepo/node_modules
+web/app/themes/aepo/npm-debug.log
+web/app/themes/aepo/yarn-error.log
+web/app/themes/aepo/vendor
+
 # Dotenv
 .env
 .env.*

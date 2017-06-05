@@ -1,0 +1,33 @@
+$small-screen: 768px;
+$medium-screen: 992px;
+$large-screen: 1200px;
+
+$rhythm: 24px;
+$column-width: 60px;
+$container-width: $column-width * 12 + $rhythm * 12;
+$header-height: 72px;
+
+$font-heading: "Avenir";
+$font-system:
+  "Helvetica Neue", "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans",
+  "Droid Sans", "Arial", sans-serif;
+
+$silver: #fafbfc;
+$blue: #47b7e9;
+$gray: #c3cdd4;
+$color-text: #57656f;
+$color-strong: #313f48;
+$color-link: $blue;
+
+$shadow: 0 0 40px rgba(black, 0.1);
+$radius: 2px;
+$border: 1px solid #e4e9ec;
+
+$ease: cubic-bezier(0.16, 0.68, 0.43, 0.99);
+// another good one: cubic-bezier(.7,0,.3,1)
+
+$z-background: -1;
+$z-hero-nav: 1;
+$z-header: 10;
+$z-burger: 20;

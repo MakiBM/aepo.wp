@@ -1,0 +1,38 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-header;
+  height: $header-height;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: $z-background;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: $shadow;
+    opacity: 0;
+    transition: opacity 200ms $ease;
+  }
+
+  &.-fixed:before {
+    opacity: 1;
+  }
+
+  @media(min-width: $small-screen) {
+    position: fixed;
+  }
+}
+
+.page-header-spacer {
+  height: $header-height;
+  width: 100%;
+}

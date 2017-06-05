@@ -1,0 +1,15 @@
+.logo-wall {
+  @include grid($gutter: 20px, $col: fit);
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.logo-wall__item {
+  padding: 20px 60px;
+  opacity: 0.5;
+  transition: opacity 200ms $ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}

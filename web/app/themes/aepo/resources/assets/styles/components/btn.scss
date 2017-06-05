@@ -1,0 +1,40 @@
+.btn-list {
+  margin-top: $rhythm * 2 - 10px;
+}
+
+.btn {
+  @include background-parent;
+  position: relative;
+  display: inline-flex;
+  height: $rhythm * 2;
+  width: 220px;
+  max-width: 100%;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius;
+  border: $border;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 300;
+
+  &.-white {
+    background-color: white;
+  }
+
+  &:before {
+    @extend .background-layer;
+    box-shadow: $shadow;
+    content: "";
+    opacity: 0;
+    transition: opacity 200ms $ease;
+  }
+
+  &:hover {
+    font-weight: 900;
+
+    &:before {
+     opacity: 1;
+   }
+  }
+}

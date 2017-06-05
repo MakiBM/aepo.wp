@@ -1,0 +1,11 @@
+.horizontal-container {
+  $padding: $rhythm * 1.5;
+  $max-width: $container-width + $padding * 2;
+
+  width: 100%;
+  max-width: $max-width;
+  padding-left: $padding;
+  padding-right: $padding;
+  margin-right: auto;
+  margin-left: auto;
+}

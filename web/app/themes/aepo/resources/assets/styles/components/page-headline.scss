@@ -1,0 +1,12 @@
+.page-headline {
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.page-headline__title {
+  @include typography(h2);
+}
+
+.page-headline__subtitle {
+  @include typography(h3);
+}

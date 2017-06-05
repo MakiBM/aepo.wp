@@ -1,0 +1,30 @@
+// Keep vendor overwrites and customisation out of their root files
+.slick-dots {
+  left: 0;
+  display: flex;
+  justify-content: center;
+
+  li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    float: left;
+    border-radius: 50%;
+    border: 1px solid $gray;
+    background: transparent;
+    transition: all 200ms ease;
+
+    button {
+      display: none !important;
+    }
+  }
+
+  .slick-active {
+    background: $gray;
+  }
+}
+
+.slick-slide {
+  outline: 0;
+}

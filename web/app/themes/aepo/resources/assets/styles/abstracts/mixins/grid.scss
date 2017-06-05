@@ -1,0 +1,40 @@
+@mixin grid ($gutter: 0, $col: 3) {
+  $width: 0; // define
+
+  @if $gutter == 0 {
+    $width: 100%;
+  } @else {
+    $width: calc(100% + #{$gutter});
+  }
+
+  display: flex;
+  width: $width;
+  margin: $gutter / 2 * -1;
+  flex-wrap: wrap;
+
+  > * {
+
+    @if $col == fit {
+      min-width: auto;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 0;
+      margin: $gutter / 2;
+    }
+    @else {
+      $basis: 0; // define
+      @if $gutter == 0 {
+        $basis: calc(100% / #{$col});
+      } @else {
+        $basis: calc(100% / #{$col} - #{$gutter});
+      }
+
+      min-width: 0;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: $basis;
+      margin: $gutter / 2;
+    }
+
+  }
+}

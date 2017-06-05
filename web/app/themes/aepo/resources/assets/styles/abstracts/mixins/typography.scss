@@ -1,0 +1,86 @@
+@mixin typography($style) {
+
+  @if 'h2' == $style {
+    font-family: $font-heading;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 60px;
+    text-transform: uppercase;
+  }
+
+  @if 'h4' == $style {
+    font-family: $font-heading;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 33px;
+    text-transform: uppercase;
+  }
+
+  @if 'h3' == $style {
+    font-family: $font-heading;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 48px;
+  }
+
+  @if 'facebook' == $style {
+    font-family: $font-system;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-link;
+  }
+
+  @if 'name' == $style {
+    font-family: $font-heading;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+  }
+
+  @if 'date' == $style {
+    font-family: $font-system;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(white, 0.5);
+  }
+
+  @if 'paragraph' == $style {
+    font-family: $font-system;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @if 'quote' == $style {
+    font-family: $font-system;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 24px;
+    font-style: italic;
+  }
+
+  @if 'category' == $style {
+    font-family: $font-system;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  @if 'small-title' == $style {
+    font-family: $font-system;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+  }
+
+  @if 'footer' == $style {
+    font-family: $font-system;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

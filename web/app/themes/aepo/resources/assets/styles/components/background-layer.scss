@@ -1,0 +1,14 @@
+.background-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-background;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+
+  &.-white {
+    background-color: white;
+  }
+}

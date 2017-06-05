@@ -1,0 +1,30 @@
+.page-footer {
+  @extend .content-section;
+  @include typography(footer);
+}
+
+.page-footer__copy {
+  margin-top: 30px;
+}
+
+.page-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-footer__nav__link {
+  $padding: 15px;
+
+  padding: $padding;
+  text-transform: uppercase;
+  transition: color 200ms $ease;
+
+  &:hover {
+    color: $color-strong;
+  }
+}
+
+
