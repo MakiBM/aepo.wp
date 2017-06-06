@@ -47,11 +47,14 @@
   $padding-horizontal: 20px;
 
   position: relative;
-  left: $padding-horizontal;
   padding: $padding-vertical $padding-horizontal;
   text-transform: uppercase;
   color: $color-text;
   transition: color 200ms $ease;
+
+  @media(min-width: $small-screen) {
+    left: $padding-horizontal;
+  }
 
   &:hover {
     color: $color-strong;
